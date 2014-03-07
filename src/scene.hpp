@@ -6,11 +6,17 @@
 
 class Scene
 {
+  std::list<System*> systems;
+  bool running = true;
+
 public:
   Scene();
 
   std::list<Entity> entities;
-  std::list<System> systems;
+
+  void add_system(System *system);
 
   void update(double dt);
+
+  bool is_scene_over();
 };

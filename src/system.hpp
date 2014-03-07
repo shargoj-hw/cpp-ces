@@ -6,10 +6,8 @@
 class System
 {
 public:
-  System();
+  virtual void init() = 0;
+  virtual void cleanup() = 0;
 
-  void init();
-  void cleanup();
-
-  virtual std::list<Entity> update(const std::list<Entity> entities, double dt);
+  virtual std::list<Entity> update(const std::list<Entity> entities, double dt) = 0;
 };
