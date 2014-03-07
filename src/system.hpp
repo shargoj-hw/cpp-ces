@@ -1,13 +1,16 @@
 #pragma once
 
+#include <SDL2/SDL.h>
 #include "entity.hpp"
 #include <list>
 
 class System
 {
 public:
-  virtual void init() = 0;
-  virtual void cleanup() = 0;
+  virtual void init() {}
+  virtual void cleanup() {}
 
-  virtual std::list<Entity> update(const std::list<Entity> entities, double dt) = 0;
+  virtual void update(const std::list<SDL_Event> events, 
+				   std::list<Entity> *entities,
+				   double dt) = 0;
 };

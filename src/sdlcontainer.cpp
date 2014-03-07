@@ -12,7 +12,7 @@ SDLContainer::SDLContainer()
   window = SDL_CreateWindow("New Window",
 			    SDL_WINDOWPOS_UNDEFINED,
 			    SDL_WINDOWPOS_UNDEFINED,
-			    640, 480,
+			    WIDTH, HEIGHT,
 			    SDL_WINDOW_OPENGL);
 
   if (window == NULL)

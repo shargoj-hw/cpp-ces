@@ -3,6 +3,9 @@
 #include <SDL2/SDL.h>
 #include <list>
 
+#define WIDTH (640)
+#define HEIGHT (480)
+
 class SDLContainer
 {
   SDLContainer();
